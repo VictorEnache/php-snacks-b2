@@ -41,7 +41,8 @@ $ads = [
 
 ];
 
-
+$numero_casuale = rand(0, count($ads) -1); 
+var_dump($numero_casuale);
 
 ?>
 
@@ -55,16 +56,16 @@ $ads = [
 </head>
 <body>
     
+
  <?php foreach($ads as $key => $ad) : ?>
     
-    <?php $numero_casuale = rand(0,( -1)); ?>
     <?php if ($key == $numero_casuale) : ?>
-        <?php var_dump($ad['image_path']) ?>
-        <img src="<?= $ad['image_path'] ?>" alt="">
-        <a href="<?= $ad['link'] ?>"></a>
+        
+        <img src="<?= $ad['image_path']?>" alt="">
+        <a href="<?= $ad['link'] ?>">link pubblicità</a>
         
     <?php endif; ?>
-    <?php endforeach;M?>
+    <?php endforeach; ?>
 
 
 </body>
